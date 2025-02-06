@@ -262,6 +262,7 @@
     
 #     return first, second
 
+
 ## Replace 0 with 5
 # def convertFive(n):
 #     string = str(n)
@@ -308,4 +309,23 @@
 # val = check_elements(arr, A, B)
 # print(val)
 
-jgjgjgjg
+
+
+## At least two greater elements
+# def findElements(self, arr):
+#         if len(arr) < 2:
+#             return -1
+
+#         greatest = second_greatest = float('-inf')
+
+#         for num in arr:
+#             if num > greatest:
+#                 second_greatest = greatest
+#                 greatest = num
+#             elif num > second_greatest and num != greatest:
+#                 second_greatest = num
+
+#         result = [num for num in arr if num < second_greatest]
+#         result.sort()
+#         return result
+

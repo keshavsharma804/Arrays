@@ -329,3 +329,47 @@
 #         result.sort()
 #         return result
 
+
+## Find the fine
+# def totalFine(date, car, fine):
+#     sum = 0
+#     for i in range (len(car)):
+#         if car[i]%2 != 0 and date%2 == 0:
+#             sum += fine[i]
+#         elif car[i]%2 == 0 and date%2 !=0:
+#             sum += fine[i]
+#     return sum
+
+# date = 12
+# car = [2375, 7682, 2325, 2352]
+# fine = [250, 500, 350, 200]
+# value = totalFine(date, car, fine)
+# print(value)
+
+
+# #First 1 in a Sorted Binary Array
+# def first(arr):
+#     for i in range(len(arr)):
+#         if arr[i] > 0:
+#             return i
+#     return -1
+
+# arr = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+# value = first(arr)
+# print(value)
+
+       
+## Max and Min Product from 2 Arrays
+# def find_multiplication(arr1, arr2):
+#     max = float('-inf')
+#     min = float('inf')
+
+#     for i in arr1:
+#         if i > max:
+#             max = i
+#     for i in arr2:
+#         if i < min:
+#             min = i
+    
+#     mul = max * min
+#     return mul

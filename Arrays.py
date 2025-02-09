@@ -373,3 +373,17 @@
     
 #     mul = max * min
 #     return mul
+
+
+def findtriplet(arr):
+    sort = sorted(arr)
+    for i in range(0, len(sort) -1):
+        for j in range(i+1, len(sort)):
+            sum = sort[i] + sort[j]
+            if sum in sort[j+1:]: 
+                return True
+    return False
+
+arr = [3,4,5]
+value = findtriplet(arr)
+print(value)

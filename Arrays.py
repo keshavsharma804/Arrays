@@ -414,3 +414,4 @@ arr = [12, 34, 45, 9, 8, 90, 3]
 value = seg(arr)
 print(value)
             
+            

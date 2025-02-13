@@ -414,4 +414,39 @@ arr = [12, 34, 45, 9, 8, 90, 3]
 value = seg(arr)
 print(value)
             
-            
+
+def maxNtype(arr):
+        if arr == sorted(arr):
+            return 1
+    
+   
+        if arr == sorted(arr, reverse=True):
+            return 2
+
+        min_index = arr.index(min(arr))  
+        max_index = arr.index(max(arr))  
+    
+    
+        if min_index > 0 and max_index < min_index:
+            return 4
+    
+ 
+        if max_index > 0 and min_index < max_index:
+            return 3
+
+
+# Positive and negative elements
+def arrange(arr):
+    positive = [x for x in arr if x > 0]
+    negative = [x for x in arr if x < 0]
+
+    i, j = 0,0
+    result = []
+
+    while i < len(positive) and j < len(negative):
+        result.append(positive[i])
+        result.append(negative[j])
+
+        i+= 1
+        j+= 1
+    return result

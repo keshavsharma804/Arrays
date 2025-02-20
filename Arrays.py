@@ -486,7 +486,7 @@
 #                 return i,j
 
 
-## Remove duplicate from sorted array
+# Remove duplicate from sorted array
 def dup(arr):
     if not arr:
         return 0
@@ -494,7 +494,20 @@ def dup(arr):
 
     for j in range(1, len(arr)):
         if arr[i] != arr[j]:
-            i+=1
             arr[i] = arr[j]
+            i+=1
 
     return i + 1
+
+## Remove Element 
+def rem(arr,val):
+    if not arr:
+        return 0
+    i = 0
+    for j in range(0, len(arr)):
+        if val != arr[j]:
+            arr[i] = arr[j]
+            i+=1
+            
+    
+    return i

@@ -486,28 +486,56 @@
 #                 return i,j
 
 
-# Remove duplicate from sorted array
-def dup(arr):
-    if not arr:
-        return 0
-    i = 0
+# # Remove duplicate from sorted array
+# def dup(arr):
+#     if not arr:
+#         return 0
+#     i = 0
 
-    for j in range(1, len(arr)):
-        if arr[i] != arr[j]:
-            arr[i] = arr[j]
-            i+=1
+#     for j in range(1, len(arr)):
+#         if arr[i] != arr[j]:
+#             arr[i] = arr[j]
+#             i+=1
 
-    return i + 1
+#     return i + 1
 
-## Remove Element 
-def rem(arr,val):
-    if not arr:
-        return 0
-    i = 0
-    for j in range(0, len(arr)):
-        if val != arr[j]:
-            arr[i] = arr[j]
-            i+=1
-            
+# # Remove Element 
+# def rem(arr,val):
+#     if not arr:
+#         return 0
+#     i = 0
+#     for j in range(0, len(arr)):
+#         if val != arr[j]:
+#             arr[i] = arr[j]
+#             i+=1           
     
-    return i
+#     return i
+
+## Search Insert Position
+def arr(nums, target):
+    if not nums:
+        return 0
+    for i in range(len(nums)):
+        if nums[i] == target:
+            return i
+        elif nums[i] > target:
+            return i
+               
+    return len(nums)
+
+nums = [1,3,5]
+target = 6
+print(arr(nums,target))
+
+## Plus One
+def plusOne(digits):
+    n = len(digits)
+    for i in range(n - 1, -1, -1):  
+        if digits[i] != 9:
+            digits[i] += 1  
+            return digits
+        digits[i] = 0  
+        
+    return [1] + digits  
+
+
